@@ -165,6 +165,17 @@ For this project, you'll be working with two datasets. Here are the s3 links for
 The Redshift service is where data will be ingested and transformed, in fact though COPY command we will access to the JSON files inside the buckets and copy their content on our staging tables.
 
 
+## Configuring the DAG
+
+In the DAG, we add default parameters according to these guidelines
+
+- The DAG does not have dependencies on past runs
+- On failure, the task are retried 3 times
+- Retries happen every 5 minutes
+- Catchup is turned off
+- Do not email on retry
+
+
 ## Building the operators
 
 We build four different operators that will stage the data, transform the data, and run checks on data quality.
