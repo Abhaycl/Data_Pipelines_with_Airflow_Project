@@ -45,8 +45,8 @@ This project will introduce to the core concepts of Apache Airflow. Where we wil
 [image37]: ./images/airflow17.jpg "Airflow"
 [image38]: ./images/airflow00.jpg "Airflow"
 [image39]: ./images/airflow18.jpg "Airflow"
-[image40]: ./images/airflow19.png "Airflow"
-[image41]: ./images/airflow20.png "Airflow"
+[image40]: ./images/airflow19.jpg "Airflow"
+[image41]: ./images/airflow20.jpg "Airflow"
 
 
 ---
@@ -214,7 +214,7 @@ For example one test could be a SQL statement that checks if certain column cont
 
 
 ---
-## Correct execution of all our tasks or nodes at Airflow
+## Correct execution of all our tasks or nodes in Airflow
 
 ![alt text][image21]
 ![alt text][image22]
