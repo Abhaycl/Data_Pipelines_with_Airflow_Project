@@ -26,6 +26,27 @@ This project will introduce to the core concepts of Apache Airflow. Where we wil
 [image18]: ./images/apache.jpg "Apache Airflow"
 [image19]: ./images/star_schema.jpg "Star Schema"
 [image20]: ./images/dag.png "DAG dependencies"
+[image21]: ./images/airflow01.jpg "Airflow"
+[image22]: ./images/airflow02.jpg "Airflow"
+[image23]: ./images/airflow03.jpg "Airflow"
+[image24]: ./images/airflow04.jpg "Airflow"
+[image25]: ./images/airflow05.jpg "Airflow"
+[image26]: ./images/airflow06.jpg "Airflow"
+[image27]: ./images/airflow07.jpg "Airflow"
+[image28]: ./images/airflow08.jpg "Airflow"
+[image29]: ./images/airflow09.jpg "Airflow"
+[image30]: ./images/airflow10.jpg "Airflow"
+[image31]: ./images/airflow11.jpg "Airflow"
+[image32]: ./images/airflow12.jpg "Airflow"
+[image33]: ./images/airflow13.jpg "Airflow"
+[image34]: ./images/airflow14.jpg "Airflow"
+[image35]: ./images/airflow15.jpg "Airflow"
+[image36]: ./images/airflow16.jpg "Airflow"
+[image37]: ./images/airflow17.jpg "Airflow"
+[image38]: ./images/airflow00.jpg "Airflow"
+[image39]: ./images/airflow18.jpg "Airflow"
+[image40]: ./images/airflow19.png "Airflow"
+[image41]: ./images/airflow20.png "Airflow"
 
 
 ---
@@ -190,3 +211,33 @@ Dimension loads are often done with the truncate-insert pattern where the target
 The final operator to create is the data quality operator, which is used to run checks on the data itself. The operator's main functionality is to receive one or more SQL based test cases along with the expected results and execute the tests. For each the test, the test result and expected result needs to be checked and if there is no match, the operator should raise an exception and the task should retry and fail eventually.
 
 For example one test could be a SQL statement that checks if certain column contains NULL values by counting all the rows that have NULL in the column. We do not want to have any NULLs so expected result would be 0 and the test would compare the SQL statement's outcome to the expected result.
+
+
+---
+## Correct execution of all our tasks or nodes at Airflow
+
+![alt text][image21]
+![alt text][image22]
+![alt text][image23]
+![alt text][image24]
+![alt text][image25]
+![alt text][image26]
+![alt text][image27]
+![alt text][image28]
+![alt text][image29]
+![alt text][image30]
+![alt text][image31]
+![alt text][image32]
+![alt text][image33]
+![alt text][image34]
+![alt text][image35]
+![alt text][image36]
+![alt text][image37]
+![alt text][image38]
+
+
+---
+### Erroneous execution of one of our tasks or nodes in Airflow
+![alt text][image39]
+![alt text][image40]
+![alt text][image41]
