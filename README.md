@@ -6,13 +6,25 @@ This project will introduce to the core concepts of Apache Airflow. Where we wil
 
 [//]: # (Image References)
 
-[image1]: ./images/redshift_start.jpg "Start of the redshift cluster"
-[image2]: ./images/create_tables.jpg "Creation of the tables"
-[image3]: ./images/etl.jpg "Transformation of data"
-[image4]: ./images/redshift_stop.jpg "Stop of the redshift cluster"
-[image5]: ./images/star_schema.jpg "Star schema"
-[image6]: ./images/cluster_info.jpg "Cluster Information"
-[image7]: ./images/cluster_queries.jpg "Queries"
+[image01]: ./images/user1.jpg "User creation"
+[image02]: ./images/user2.jpg "User creation"
+[image03]: ./images/user3.jpg "User creation"
+[image04]: ./images/user4.jpg "User creation"
+[image05]: ./images/user5.jpg "User creation"
+[image06]: ./images/role1.jpg "Role creation"
+[image07]: ./images/role2.jpg "Role creation"
+[image08]: ./images/role3.jpg "Role creation"
+[image09]: ./images/role4.jpg "Role creation"
+[image10]: ./images/securitygroup1.jpg.jpg "Security Group Configuration"
+[image11]: ./images/securitygroup2.jpg.jpg "Security Group Configuration"
+[image12]: ./images/cluster1.jpg "Redshift cluster creation"
+[image13]: ./images/cluster2.jpg "Redshift cluster creation"
+[image14]: ./images/cluster3.jpg "Redshift cluster creation"
+[image15]: ./images/cluster4.jpg "Redshift cluster creation"
+[image16]: ./images/cluster5.jpg "Redshift cluster creation"
+[image17]: ./images/cluster6.jpg "Redshift cluster creation"
+[image18]: ./images/apache.jpg "Apache Airflow"
+
 
 ---
 
@@ -23,74 +35,46 @@ This project will introduce to the core concepts of Apache Airflow. Where we wil
 
 The requirements for the project are a valid aws account, with accompanying security credentials, as well as a python environment, which satisfies the module requirements given.
 
-You will need to add aws access key and secret information to the dwf.cfg file, under [AWS_ACCESS]. This is not to be comitted to git.
+- An IAM user must be created.
 
-The parameterization of the dwh.cfg file is shown below.
-```code
-[CLUSTER]
-HOST=This parameter will be defined according to the configuration set up
-DB_NAME=This parameter will be defined according to the configuration set up
-DB_USER=This parameter will be defined according to the configuration set up
-DB_PASSWORD=This parameter will be defined according to the configuration set up
-DB_PORT=5439
-CLUSTER_IDENTIFIER=This parameter will be defined according to the configuration set up
-NODE_TYPE=ds2.xlarge
-NODE_COUNT=2
-
-[AWS_ACCESS]
-AWS_ACCESS_KEY_ID=This parameter will be defined according to the configuration set up
-AWS_SECRET_ACCESS_KEY=This parameter will be defined according to the configuration set up
-AWS_REGION=us-west-2
-
-[IAM_ROLE]
-NAME=dwhRole
-POLICY_NAME=AmazonS3ReadOnlyAccess
-ARN=arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
-REDSHIFT_ARN=This parameter will be defined according to the configuration set up
-
-[S3]
-LOG_DATA=s3://udacity-dend/log_data
-LOG_JSONPATH=s3://udacity-dend/log_json_path.json
-SONG_DATA=s3://udacity-dend/song_data
-```
+![alt text][image01]
+![alt text][image02]
+![alt text][image03]
+![alt text][image04]
+![alt text][image05]
 
 
-We also have to create our security group which has to be assigned to the default VPC. Because the creation of our cluster has to belong to a VPC.
+- A role must be created for redshift.
 
-**NOTE:** _To follow IAC (Infrastructure as Code) practices, and to allow us to easily start and stop the redshift cluster to save costs, we can use the following scripts;_
+![alt text][image06]
+![alt text][image07]
+![alt text][image08]
+![alt text][image09]
 
-    redshift_start.py
-    redshift_stop.py
 
-The scripts will create/remove the neccessary resources for redshift to run.
+- A default VPC has to be created in which the security group has to be configured.
 
-For the execution of our own code, we go to the project workspace or to our own terminal in Visual Code.
+![alt text][image10]
+![alt text][image11]
 
-In the project workspace we can open a terminal and run the following files:
 
-Start the redshift cluster.
+- This time we create a redshift cluster on AWS.
+
+![alt text][image12]
+![alt text][image13]
+![alt text][image14]
+![alt text][image15]
+![alt text][image16]
+![alt text][image17]
+
+
+- We need to perform an installation of the Apache airflow software and run the following command to run the application:
+
 ```bash
-  python redshift_start.py
+   /opt/airflow/start.sh
 ```
-![alt text][image1]
 
-Create the tables.
-```bash
-  python create_tables.py
-```
-![alt text][image2]
-
-Data transformations.
-```bash
-  python etl.py
-```
-![alt text][image3]
-
-Stop the redshift cluster.
-```bash
-  python redshift_stop.py
-```
-![alt text][image4]
+![alt text][image18]
 
 
 ---
