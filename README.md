@@ -214,14 +214,17 @@ For example one test could be a SQL statement that checks if certain column cont
 
 
 ---
-## Correct execution of all our tasks or nodes in Airflow
+## Correct execution of all our tasks in Airflow
 
+- Airflow graphical interface.
 ![alt text][image21]
 ![alt text][image22]
 ![alt text][image23]
 ![alt text][image24]
 ![alt text][image25]
 ![alt text][image26]
+
+- Logs of each of our tasks.
 ![alt text][image27]
 ![alt text][image28]
 ![alt text][image29]
@@ -233,11 +236,13 @@ For example one test could be a SQL statement that checks if certain column cont
 ![alt text][image35]
 ![alt text][image36]
 ![alt text][image37]
+
+- Queries made in our redshift cluster.
 ![alt text][image38]
 
 
 ---
-### Erroneous execution of one of our tasks or nodes in Airflow
+### Erroneous execution of some of our tasks in Airflow
 ![alt text][image39]
 ![alt text][image40]
 ![alt text][image41]
