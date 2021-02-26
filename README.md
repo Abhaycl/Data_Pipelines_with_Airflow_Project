@@ -245,7 +245,7 @@ For example one test could be a SQL statement that checks if certain column cont
 
 
 ---
-### Erroneous execution of some of our tasks in Airflow
+## Erroneous execution of some of our tasks in Airflow
 
 ![alt text][image39]
 ![alt text][image40]
