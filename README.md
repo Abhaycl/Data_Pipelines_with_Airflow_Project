@@ -224,6 +224,7 @@ For example one test could be a SQL statement that checks if certain column cont
 ![alt text][image24]
 ![alt text][image25]
 ![alt text][image26]
+![alt text][image37]
 
 - Logs of each of our tasks.
 
@@ -237,7 +238,6 @@ For example one test could be a SQL statement that checks if certain column cont
 ![alt text][image34]
 ![alt text][image35]
 ![alt text][image36]
-![alt text][image37]
 
 - Queries made in our redshift cluster.
 
