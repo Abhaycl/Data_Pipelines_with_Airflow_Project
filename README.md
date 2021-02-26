@@ -24,6 +24,8 @@ This project will introduce to the core concepts of Apache Airflow. Where we wil
 [image16]: ./images/cluster5.jpg "Redshift cluster creation"
 [image17]: ./images/cluster6.jpg "Redshift cluster creation"
 [image18]: ./images/apache.jpg "Apache Airflow"
+[image19]: ./images/star_schema.jpg "Star Schema"
+[image20]: ./images/dag.png "DAG dependencies"
 
 
 ---
@@ -126,7 +128,7 @@ The songplays table is the core of this schema, is it our fact table and it cont
     * artist_id REFERENCES artists(artist_id)
 
 There are also two staging tables; One for event dataset and one for song dataset.
-![alt text][image5]
+![alt text][image19]
 
 
 ## Preamble
@@ -157,7 +159,7 @@ In the DAG, we add default parameters according to these guidelines
 - Do not email on retry
 
 We configure the task dependencies so that the graph view follows the flow shown in the image below.
-![alt text][image5]
+![alt text][image20]
 
 
 ## Building the operators
